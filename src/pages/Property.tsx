@@ -87,6 +87,11 @@ const Property = () => {
                   <p className="text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
+                  <div className="mt-4">
+                    <Link to={`/service-booking?service=${encodeURIComponent(service.title)}`} className="text-sm btn-outline">
+                      Book Service
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
@@ -120,7 +125,7 @@ const Property = () => {
                 ))}
               </ul>
 
-              <Link to="/contact" className="btn-primary group">
+              <Link to={`/service-booking?service=${encodeURIComponent('Property Services')}`} className="btn-primary group">
                 Explore Opportunities
                 <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -158,8 +163,8 @@ const Property = () => {
       <CTABanner
         title="Start Your Property Investment Journey"
         description="Partner with Derivative Group to identify and capitalize on the best real estate opportunities."
-        buttonText="Get Expert Advice"
-        buttonLink="/contact"
+        buttonText="Book a Service"
+        buttonLink={`/service-booking?service=${encodeURIComponent('Property Services')}`}
       />
     </>
   );

@@ -143,13 +143,12 @@ const Home = () => {
             </div>
 
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-primary to-secondary rounded-sm overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <span className="text-7xl font-serif font-bold text-primary-foreground">10+</span>
-                    <p className="text-primary-foreground/80 mt-2 text-lg">Years of Excellence</p>
-                  </div>
-                </div>
+              <div className="aspect-square rounded-sm overflow-hidden relative">
+                <img
+                  src="https://i.ibb.co/6cG8R6Bx/DG.jpg"
+                  alt="Derivative Group - Trusted Partner"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
               </div>
               {/* Decorative accent */}
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/20 rounded-sm -z-10" />
@@ -180,11 +179,12 @@ const Home = () => {
                 className="relative text-center opacity-0 animate-fade-up"
                 style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'forwards' }}
               >
-                <span className="text-7xl font-serif font-bold text-accent/20">{item.step}</span>
-                <h4 className="text-xl font-serif font-semibold text-foreground -mt-6 mb-3">
-                  {item.title}
-                </h4>
-                <p className="text-muted-foreground">{item.description}</p>
+                <div className="relative z-10">
+                  <h4 className="text-xl font-serif font-semibold text-foreground mb-3">
+                    {item.title}
+                  </h4>
+                  <p className="text-muted-foreground">{item.description}</p>
+                </div>
               </div>
             ))}
           </div>

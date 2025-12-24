@@ -36,18 +36,25 @@ const Header = () => {
     ? 'text-foreground'
     : 'text-primary-foreground';
 
+  const defaultLogo = 'https://i.ibb.co/pvptjhbr/Derivative-Group-1.png';
+  const scrolledLogo = 'https://i.ibb.co/wNXysvvh/Derivative-Group.png';
+  const logoSrc = isScrolled || !isHomePage ? scrolledLogo : defaultLogo;
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${headerBg}`}
     >
-      <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8 pt-2">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <span className={`text-2xl font-serif font-bold tracking-tight ${textColor}`}>
-              Derivative
-            </span>
-            <span className="text-accent text-2xl font-serif font-bold">Group</span>
+          <Link to="/" className="flex items-center">
+            <img
+              src={logoSrc}
+              alt="Derivative Group"
+              width={204}
+              height={109}
+              className="object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}

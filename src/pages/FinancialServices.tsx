@@ -91,6 +91,11 @@ const FinancialServices = () => {
                     </li>
                   ))}
                 </ul>
+                <div className="mt-6">
+                  <Link to={`/service-booking?service=${encodeURIComponent(service.title)}`} className="btn-outline">
+                    Book Service
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
@@ -140,7 +145,7 @@ const FinancialServices = () => {
                   </li>
                 ))}
               </ul>
-              <Link to="/contact" className="btn-primary mt-8 group">
+              <Link to={`/service-booking?service=${encodeURIComponent('Financial Services')}`} className="btn-primary mt-8 group">
                 Discuss Your Needs
                 <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -153,8 +158,8 @@ const FinancialServices = () => {
       <CTABanner
         title="Ready to Accelerate Your Growth?"
         description="Let's explore how our financial solutions can help you achieve your business objectives."
-        buttonText="Get in Touch"
-        buttonLink="/contact"
+        buttonText="Book a Service"
+        buttonLink={`/service-booking?service=${encodeURIComponent('Financial Services')}`}
       />
     </>
   );

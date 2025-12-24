@@ -102,6 +102,11 @@ const Consulting = () => {
                       </li>
                     ))}
                   </ul>
+                <div className="mt-6">
+                  <Link to={`/service-booking?service=${encodeURIComponent(service.title)}`} className="btn-outline">
+                    Book Service
+                  </Link>
+                </div>
                 </div>
               </div>
             ))}
@@ -172,7 +177,7 @@ const Consulting = () => {
                 ))}
               </div>
 
-              <Link to="/contact" className="btn-primary mt-8 group">
+              <Link to={`/service-booking?service=${encodeURIComponent('Consulting Services')}`} className="btn-primary mt-8 group">
                 Start a Conversation
                 <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -205,8 +210,8 @@ const Consulting = () => {
       <CTABanner
         title="Ready to Elevate Your Business?"
         description="Let's discuss how our consulting expertise can help you achieve your strategic objectives."
-        buttonText="Schedule a Consultation"
-        buttonLink="/contact"
+        buttonText="Book a Service"
+        buttonLink={`/service-booking?service=${encodeURIComponent('Consulting Services')}`}
       />
     </>
   );

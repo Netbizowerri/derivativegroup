@@ -3,7 +3,6 @@ import { ArrowRight, Target, Eye, Heart, Users, Shield, Lightbulb } from 'lucide
 import SEOHead from '@/components/SEOHead';
 import SectionHeading from '@/components/SectionHeading';
 import CTABanner from '@/components/CTABanner';
-import aboutTeam from '@/assets/about-team.jpg';
 
 const About = () => {
   const values = [
@@ -85,11 +84,11 @@ const About = () => {
             </div>
 
             <div className="relative">
-              <img
-                src={aboutTeam}
-                alt="Derivative Group team members collaborating in a modern office"
-                className="w-full rounded-sm shadow-card"
-              />
+                <img
+                  src="https://i.ibb.co/9kc4bsGm/Gemini-Generated-Image-c4tfkvc4tfkvc4tf-1.png"
+                  alt="Derivative Group team members collaborating"
+                  className="w-full rounded-sm shadow-card"
+                />
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent/20 rounded-sm -z-10" />
             </div>
           </div>
